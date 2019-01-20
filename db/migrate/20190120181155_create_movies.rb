@@ -3,8 +3,8 @@ class CreateMovies < ActiveRecord::Migration[5.2]
     create_table :movies do |t|
       t.string :name
       t.string :description
-      t.string :year
-      t.string :ranking
+      t.integer :year, default: 2019
+      t.string :ranking, default: 1
       t.references :category, foreign_key: true
 
       t.timestamps
